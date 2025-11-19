@@ -16,11 +16,11 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "qiskit>=0.22,<=2",
+    "qiskit>=0.22,<3",
 ]
 
 [project.urls]
-Repository = "https://github.com/derek-wang-ibm/dynacir"
+source = "https://github.com/derek-wang-ibm/dynacir"
 
 [project.entry-points."qiskit.transpiler.optimization"]
-"dynacir" = "dynacir.dynacir_plugin:DynacirPlugin"
+dynacir = "dynacir.dynacir_plugin:DynacirPlugin"
