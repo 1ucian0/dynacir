@@ -1,2 +1,0 @@
-[qiskit.transpiler.optimization]
-dynacir = dynacir.dynacir_plugin:DynacirPlugin
