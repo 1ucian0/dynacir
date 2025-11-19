@@ -9,12 +9,12 @@ class CollectResets(TransformationPass):
     def run(self, dag: DAGCircuit) -> DAGCircuit:
         # This method will be called on the DAG of the quantum circuit
         # to perform the transformation.
-        
+
         # Iterate over all qubits in the circuit
         for qubit in dag.qubits:
             # Keep track of previous reset nodes for each qubit
             prev_reset_node = None
-            
+
             # Get the nodes in topological order for processing
             for node in dag.topological_op_nodes():
                 # Check if the node is a reset operation on the current qubit
@@ -29,5 +29,5 @@ class CollectResets(TransformationPass):
                     # Reset prev_reset_node if the operation is not a reset
                     # or it's applied to a different qubit
                     prev_reset_node = None
-        
+
         return dag
